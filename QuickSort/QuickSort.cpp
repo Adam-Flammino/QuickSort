@@ -87,12 +87,12 @@ int main()
 		s.insert(n);
 	}
 	s.print();
-	clock_t sTime = clock();
+	clock_t start = clock();
 	s.quicksort();
-	clock_t eTime = clock();
+	clock_t end = clock();
 	std::cout << "Sorted ";
 	s.print();
-	std::cout << "This array took " << eTime - sTime << " tick(s) to sort." << 
+	std::cout << "This array took " << end - start << " ticks(s) to sort." << 
 		" Average runtime is O(n log n). Worst case runtime is O(n^2)\n";
     return 0;
 }
