@@ -77,7 +77,7 @@ public:
 
 int main()
 {
-	final: int MAX_SIZE = 250;
+	int const MAX_SIZE = 250;
 	int n;
 	srand(time(nullptr)); // random seed
 	Sorter s;
