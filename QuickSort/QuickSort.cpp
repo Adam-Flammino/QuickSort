@@ -52,7 +52,7 @@ public:
 		int leftMark = left - 1; 
 		int rightMark = right;
 		while (true) {
-			while (workspace[++leftMark] < pivot && leftMark < right) // get larger item
+			while (workspace[++leftMark] < pivot) // get larger item
 				;
 			while (workspace[--rightMark] > pivot && rightMark > 0) // get smaller item
 				;
@@ -87,10 +87,13 @@ int main()
 		s.insert(n);
 	}
 	s.print();
+	clock_t sTime = clock();
 	s.quicksort();
+	clock_t eTime = clock();
 	std::cout << "Sorted ";
 	s.print();
-	std::cout << "Average runtime is O(n logn). Worst case runtime is O(n^2)\n";
+	std::cout << "This array took " << eTime - sTime << " tick(s) to sort." << 
+		" Average runtime is O(n log n). Worst case runtime is O(n^2)\n";
     return 0;
 }
 
